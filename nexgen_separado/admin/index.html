@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="NexgenMarketing - Diseño de páginas web, tiendas online y presencia digital.">
+<title>NexgenMarketing | Tu negocio más grande en Internet</title>
+<style>
+:root{
+ --bg:#020813;--panel:#071522;--panel2:#0a1c2d;--line:#123c5a;
+ --cyan:#12d8ff;--blue:#087cff;--text:#f7fbff;--muted:#91a4b8;
+ --shadow:0 20px 70px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:430px;height:430px;border-radius:50%;filter:blur(130px);opacity:.13;pointer-events:none;z-index:-1}
+body:before{background:#00d9ff;left:-180px;top:-150px}body:after{background:#0868ff;right:-180px;bottom:-170px}
+a{text-decoration:none;color:inherit}
+.container{width:min(1240px,92%);margin:auto}
+nav{height:74px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(2,8,19,.72);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,216,255,.12)}
+.navin{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:950;letter-spacing:.5px}.logo span{color:var(--cyan)}
+.navlinks{display:flex;gap:27px;color:#c4d1df;font-size:14px}.navlinks a{transition:.25s}.navlinks a:hover{color:var(--cyan)}
+.navcta{padding:11px 17px;border-radius:11px;background:var(--cyan);color:#00131d;font-weight:900;box-shadow:0 0 25px rgba(18,216,255,.25);transition:.25s}.navcta:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(18,216,255,.5)}
+.hero{min-height:790px;padding:135px 0 80px;display:grid;grid-template-columns:1fr 1.05fr;gap:55px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border:1px solid rgba(18,216,255,.7);border-radius:30px;color:var(--cyan);font-size:12px;font-weight:900;letter-spacing:.5px;background:rgba(18,216,255,.04);animation:float 3s ease-in-out infinite}
+.hero h1{font-size:clamp(48px,6vw,82px);line-height:.98;letter-spacing:-2.5px;margin-top:22px}.hero h1 span{color:var(--cyan)}
+.hero .lead{max-width:650px;margin:24px 0;color:var(--muted);font-size:19px}
+.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:14px 21px;border-radius:12px;border:1px solid var(--cyan);font-weight:900;transition:.3s;cursor:pointer}.primary{background:var(--cyan);color:#00131c;box-shadow:0 0 25px rgba(18,216,255,.2)}.ghost{background:rgba(18,216,255,.035)}.btn:hover{transform:translateY(-4px);box-shadow:0 13px 35px rgba(0,0,0,.3)}
+.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;color:#778b9f;font-size:12px}.trust b{color:#dce8f4}
+.browser{padding:10px;border-radius:24px;background:linear-gradient(145deg,#0c2539,#06101b);border:1px solid #168eff;box-shadow:0 0 70px rgba(0,160,255,.15),var(--shadow);transform:perspective(1100px) rotateY(-4deg);transition:.5s}.browser:hover{transform:perspective(1100px) rotateY(0) translateY(-8px)}
+.browserbar{height:30px;background:#dfe7ee;border-radius:15px 15px 6px 6px;display:flex;align-items:center;gap:6px;padding-left:10px}.dot{width:8px;height:8px;border-radius:50%;background:#7b8b99}.screen{overflow:hidden;border-radius:7px;background:#f8fafc;color:#111827;min-height:420px}
+.site-nav{height:42px;background:white;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:9px;font-weight:800}.site-nav span:first-child{font-size:13px}
+.cafe-hero{min-height:190px;padding:35px;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.08)),linear-gradient(135deg,#a96d43,#24140c);color:#fff}.cafe-hero small{color:#ffd7a8}.cafe-hero h3{font-size:34px;margin:7px 0}.cafe-hero p{color:#f2ddc8;font-size:13px}.mini-products{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:15px}.mp{height:115px;border-radius:10px;background:#fff;box-shadow:0 6px 16px #0001;padding:7px;font-size:9px}.mp .photo{height:65px;border-radius:7px;margin-bottom:7px;background:linear-gradient(135deg,#e5a96e,#6c3219)}
+.section{padding:100px 0}.head{text-align:center;max-width:780px;margin:0 auto 48px}.head h2{font-size:42px;line-height:1.1}.head h2 span{color:var(--cyan)}.head p{color:var(--muted);margin-top:10px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{position:relative;overflow:hidden;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#081a2a,#050e18);transition:.35s}.service:after{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:var(--cyan);filter:blur(60px);opacity:0;right:-35px;bottom:-35px;transition:.35s}.service:hover{transform:translateY(-9px);border-color:var(--cyan);box-shadow:var(--shadow)}.service:hover:after{opacity:.16}.icon{font-size:34px;margin-bottom:16px}.service h3{color:var(--cyan);margin-bottom:8px}.service p{font-size:14px;color:var(--muted)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.plan{position:relative;padding:17px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#081a2b,#050d17);transition:.4s}.plan:hover{transform:translateY(-11px);border-color:var(--cyan);box-shadow:var(--shadow)}.featured{border:2px solid var(--cyan);box-shadow:0 0 40px rgba(18,216,255,.1)}.popular{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--cyan);color:#00121a;border-radius:30px;padding:7px 15px;font-size:11px;font-weight:950;white-space:nowrap}
+.demo{height:245px;border-radius:15px;overflow:hidden;background:#f8fafc;margin-bottom:20px;color:#152033;box-shadow:0 12px 35px #0005}.demo .browserbar{border-radius:0}.demo-screen{height:213px}.demo-top{height:118px;padding:19px;color:white}.demo-top h4{font-size:22px}.cafe{background:linear-gradient(90deg,rgba(0,0,0,.74),rgba(0,0,0,.08)),linear-gradient(135deg,#a56c42,#24140d)}.corp{background:linear-gradient(135deg,#0a2944,#1682bd)}.store{background:linear-gradient(135deg,#fff0d5,#e9f2fb);color:#132033}.store h4{color:#132033}.demo-copy{padding:10px 14px;font-size:10px;color:#697789}.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;padding:10px}.tile{height:45px;border-radius:7px;background:#dfe7ef;display:grid;place-items:center;font-size:19px}
+.plan h3{font-size:27px;color:var(--cyan)}.price{font-size:39px;font-weight:950;margin:3px 0 12px}.price small{font-size:12px;color:#8295aa;font-weight:500}.features{list-style:none;color:#cdd9e5;font-size:14px;min-height:160px}.features li{margin:8px 0}.full{width:100%}
+.compare{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#061321}.row{display:grid;grid-template-columns:2fr repeat(3,1fr);border-bottom:1px solid #143249}.row:last-child{border-bottom:0}.row div{padding:14px;text-align:center}.row div:first-child{text-align:left;color:#cbd7e2}.row.head{background:#0b253a;color:var(--cyan);font-weight:900}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{padding:26px;border:1px solid var(--line);border-radius:19px;background:#071522;text-align:center;transition:.3s}.step:hover{transform:translateY(-7px);border-color:var(--cyan)}.num{width:46px;height:46px;display:grid;place-items:center;margin:0 auto 13px;border-radius:50%;background:var(--cyan);color:#00131d;font-weight:950}.step p{color:var(--muted);font-size:13px;margin-top:5px}
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.work{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#071522;transition:.35s}.work:hover{transform:translateY(-8px);border-color:var(--cyan)}.work-preview{height:190px;padding:12px;background:#e9eef4}.mock{height:100%;border-radius:10px;overflow:hidden;background:white;color:#172033}.mockhead{height:27px;background:#e0e7ee}.mockhero{height:90px;padding:18px;color:white}.mockhero.c1{background:linear-gradient(135deg,#8c542f,#21110a)}.mockhero.c2{background:linear-gradient(135deg,#0c4266,#19a6dc)}.mockhero.c3{background:linear-gradient(135deg,#f5d7a8,#dce9f5);color:#152033}.mockhero h4{font-size:18px}.mockbody{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}.mockbody i{height:40px;background:#e4ebf1;border-radius:5px;display:block}.work-info{padding:18px}.work-info h3{margin-bottom:5px}.work-info p{font-size:13px;color:var(--muted)}
+.cta{padding:45px;border:1px solid var(--cyan);border-radius:25px;background:linear-gradient(100deg,#06223a,#063154);display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 0 45px rgba(0,174,255,.08)}.cta h2{font-size:34px}.cta p{color:#9fb2c4;margin-top:6px}
+.contact{text-align:center}.contact p{color:#93a5b8;margin:8px}.contact a{color:var(--cyan)}footer{border-top:1px solid #102a40;padding:28px 0;color:#718399}.footerin{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footerlogo{font-size:24px;font-weight:950;color:#fff}.footerlogo span{color:var(--cyan)}
+.qr{position:fixed;right:18px;bottom:18px;width:170px;background:white;color:#07111d;border-radius:15px;padding:9px;z-index:90;box-shadow:0 0 35px rgba(18,216,255,.3);text-align:center;font-size:10px;font-weight:950}.qr img{width:100%;display:block;margin:5px 0;border-radius:4px}.closeqr{display:none}
+#toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);opacity:0;background:#0b2032;border:1px solid var(--cyan);padding:12px 18px;border-radius:12px;z-index:200;transition:.3s;font-size:13px}#toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes float{50%{transform:translateY(-7px)}}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.hero>div{animation:up .8s ease both}.hero>div:nth-child(2){animation-delay:.12s}
+@media(max-width:1000px){.hero{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.plans,.portfolio{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:600px){.container{width:90%}.hero{min-height:auto;padding-top:120px}.hero h1{font-size:50px}.hero .lead{font-size:16px}.services,.process{grid-template-columns:1fr}.section{padding:70px 0}.head h2{font-size:32px}.cta{flex-direction:column;text-align:center;padding:32px 22px}.cta h2{font-size:28px}.qr{width:112px;right:9px;bottom:9px;font-size:8px}.navcta{padding:9px 12px;font-size:12px}.row{font-size:11px}.row div{padding:9px 4px}}
+
+/* ===== PANEL ADMIN ===== */
+.admin-launch{
+ position:fixed;left:18px;bottom:18px;z-index:91;padding:11px 15px;border-radius:12px;
+ background:#081b2b;color:#fff;border:1px solid rgba(18,216,255,.55);font-weight:900;
+ box-shadow:0 8px 30px #0007;cursor:pointer;transition:.3s
+}
+.admin-launch:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 0 28px rgba(18,216,255,.25)}
+.admin-overlay{
+ position:fixed;inset:0;background:rgba(0,4,10,.78);backdrop-filter:blur(12px);z-index:150;
+ display:none;padding:25px;overflow:auto
+}
+.admin-overlay.open{display:block;animation:fadeIn .25s ease}
+.admin-panel{
+ width:min(1180px,100%);margin:25px auto;background:#061321;border:1px solid #164b6d;
+ border-radius:24px;box-shadow:0 30px 100px #0009;overflow:hidden
+}
+.admin-top{
+ padding:20px 24px;border-bottom:1px solid #14374f;display:flex;align-items:center;
+ justify-content:space-between;gap:15px;flex-wrap:wrap;background:linear-gradient(90deg,#071a2a,#092238)
+}
+.admin-title h2{font-size:25px}.admin-title p{color:#8095aa;font-size:13px}
+.admin-close{border:1px solid #34536b;background:#0a1b2b;color:#fff;border-radius:10px;padding:9px 13px;cursor:pointer}
+.admin-body{padding:22px}
+.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.astat{padding:19px;border:1px solid #153b56;border-radius:17px;background:#071827}
+.astat small{display:block;color:#8195a8}.astat strong{font-size:28px;color:var(--cyan);display:block;margin-top:4px}
+.admin-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+.admin-tools input,.admin-tools select,.client-form input,.client-form select{
+ background:#071827;color:#fff;border:1px solid #244b65;border-radius:10px;padding:11px 13px;outline:none
+}
+.admin-tools input:focus,.client-form input:focus,.client-form select:focus{border-color:var(--cyan)}
+.admin-tools input{min-width:240px}
+.admin-table-wrap{overflow:auto;border:1px solid #15384f;border-radius:15px}
+.admin-table{width:100%;border-collapse:collapse;min-width:780px}.admin-table th,.admin-table td{padding:12px 13px;border-bottom:1px solid #143248;text-align:left;font-size:13px}.admin-table th{color:var(--cyan);background:#0a2032}.admin-table td{color:#cbd8e4}.admin-table tr:last-child td{border-bottom:0}
+.status{display:inline-flex;padding:5px 9px;border-radius:30px;font-size:11px;font-weight:900}.active{background:#0a3b32;color:#55e6c1}.pending{background:#463712;color:#ffd76b}.overdue{background:#421f25;color:#ff8f9d}
+.client-actions button{padding:6px 8px;border:1px solid #2b536d;background:#0a1d2c;color:#fff;border-radius:7px;cursor:pointer;margin-right:4px}
+.client-form{display:none;margin-top:15px;padding:18px;border:1px solid #17445f;border-radius:15px;background:#071827}
+.client-form.open{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;animation:up .25s ease}
+.client-form .form-actions{grid-column:1/-1;display:flex;gap:10px}.client-form button{border:0;border-radius:9px;padding:10px 15px;font-weight:900;cursor:pointer}.save-client{background:var(--cyan);color:#00131d}.cancel-client{background:#142b3c;color:#fff}
+.admin-note{margin-top:15px;color:#71869a;font-size:11px;line-height:1.5}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@media(max-width:800px){.admin-stats{grid-template-columns:repeat(2,1fr)}.client-form.open{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.admin-stats{grid-template-columns:1fr}.client-form.open{grid-template-columns:1fr}.admin-overlay{padding:8px}.admin-body{padding:13px}}
+
+
+/* ===== QR AMPLIADO ===== */
+.qr{cursor:pointer;transition:.35s}
+.qr:hover{transform:translateY(-5px) scale(1.03)}
+.qr-hint{font-size:9px;color:#536b7e;margin-top:3px}
+.qr-modal{position:fixed;inset:0;background:rgba(0,3,9,.86);backdrop-filter:blur(12px);z-index:300;display:none;align-items:center;justify-content:center;padding:20px}
+.qr-modal.open{display:flex;animation:fadeIn .2s ease}
+.qr-card{position:relative;width:min(520px,94vw);background:#fff;border-radius:25px;padding:22px;text-align:center;color:#07111d;box-shadow:0 25px 100px #000b;animation:qrPop .3s ease}
+.qr-card img{width:min(430px,80vw);height:auto;display:block;margin:12px auto;border-radius:10px}
+.qr-card h3{font-size:22px}.qr-card p{font-size:13px;color:#526477}
+.qr-close{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#071827;color:#fff;font-size:18px;cursor:pointer}
+@keyframes qrPop{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+
+/* ===== ADMIN LOGIN ===== */
+.admin-login{position:fixed;inset:0;background:rgba(0,3,9,.88);backdrop-filter:blur(14px);z-index:250;display:none;align-items:center;justify-content:center;padding:20px}
+.admin-login.open{display:flex}
+.login-card{width:min(420px,94vw);background:#061321;border:1px solid #176086;border-radius:23px;padding:28px;box-shadow:0 30px 100px #000b;text-align:center}
+.login-card .login-logo{font-size:26px;font-weight:950;margin-bottom:6px}.login-logo span{color:var(--cyan)}
+.login-card p{color:#7e93a7;font-size:13px;margin-bottom:20px}
+.login-card input{width:100%;padding:13px;background:#071827;border:1px solid #244b65;border-radius:10px;color:white;outline:none;margin-bottom:10px}
+.login-card input:focus{border-color:var(--cyan)}
+.login-card button{width:100%;padding:13px;border:0;border-radius:10px;background:var(--cyan);color:#00131d;font-weight:950;cursor:pointer}
+.login-error{height:18px;color:#ff8f9d;font-size:12px;margin:8px 0}
+.admin-toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:15px}
+.admin-toolbar button{border:1px solid #2b536d;background:#0a1d2c;color:#fff;border-radius:9px;padding:9px 12px;cursor:pointer;font-weight:800}
+.admin-toolbar button:hover{border-color:var(--cyan)}
+.payment-ok{color:#55e6c1;font-weight:900}.payment-no{color:#ff8f9d;font-weight:900}
+
+</style>
+</head>
+<body>
+<style>body{min-height:100vh;background:#06101a}.admin-shell{min-height:100vh;padding:24px}.admin-shell .admin-overlay{position:relative!important;inset:auto!important;display:block!important;padding:0!important;background:transparent!important;backdrop-filter:none!important}.admin-shell .admin-panel{width:min(1200px,100%);margin:0 auto;max-height:none!important;overflow:visible!important}.admin-shell .admin-body{padding:22px}</style>
+<div class="admin-shell">
+<div class="admin-login" id="adminLogin">
+  <div class="login-card">
+    <div class="login-logo">NEXGEN<span>MARKETING</span></div>
+    <p>Acceso privado al panel de administración</p>
+    <input id="adminUser" autocomplete="username" placeholder="Usuario">
+    <input id="adminPass" autocomplete="current-password" type="password" placeholder="Contraseña">
+    <div class="login-error" id="loginError"></div>
+    <button id="loginBtn">Ingresar al Panel</button>
+    <p style="margin:14px 0 0;font-size:10px">Acceso privado de NexGen Marketing</p>
+  </div>
+</div>
+<div class="admin-overlay" id="adminOverlay">
+ <div class="admin-panel">
+  <div class="admin-top">
+   <div class="admin-title"><h2>⚙️ Panel de Administración</h2><p>Suscripciones · cobros · estado de clientes</p></div>
+   <button class="admin-close" id="closeAdmin">✕ Volver a la página</button>
+  </div>
+  <div class="admin-body">
+   <div class="admin-stats">
+    <div class="astat"><small>Suscriptores</small><strong id="statClients">0</strong></div>
+    <div class="astat"><small>Activos</small><strong id="statActive">0</strong></div>
+    <div class="astat"><small>Pendientes</small><strong id="statPending">0</strong></div>
+    <div class="astat"><small>Facturación mensual</small><strong id="statRevenue">$0</strong></div>
+   </div>
+
+<div class="admin-toolbar">
+ <button id="exportClients">⬇️ Exportar clientes CSV</button>
+ <button id="logoutAdmin">🔒 Cerrar sesión</button>
+</div>
+
+   <div class="admin-tools">
+    <input id="clientSearch" type="search" placeholder="🔎 Buscar cliente, email o plan...">
+    <select id="statusFilter"><option value="all">Todos los estados</option><option value="active">Activos</option><option value="pending">Pendientes</option><option value="overdue">Vencidos</option></select>
+    <select id="planFilter"><option value="all">Todos los planes</option><option value="Básico">Básico</option><option value="Profesional">Profesional</option><option value="Premium">Premium</option></select>
+    <button class="btn primary" id="addClient">＋ Nuevo cliente</button>
+   </div>
+   <div class="admin-table-wrap">
+    <table class="admin-table">
+     <thead><tr><th>Cliente</th><th>Email</th><th>Plan</th><th>Importe</th><th>Próximo cobro</th><th>Pago</th><th>Estado</th><th>Acciones</th></tr></thead>
+     <tbody id="clientRows"></tbody>
+    </table>
+   </div>
+   <div class="client-form" id="clientForm">
+    <input id="fName" placeholder="Nombre del cliente">
+    <input id="fEmail" placeholder="Email">
+    <select id="fPlan"><option>Básico</option><option>Profesional</option><option>Premium</option></select>
+    <input id="fDate" type="date">
+    <select id="fStatus"><option value="active">Activo</option><option value="pending">Pendiente</option><option value="overdue">Vencido</option></select><select id="fPaid"><option value="yes">Pago realizado</option><option value="no">Pago pendiente</option></select>
+    <div class="form-actions"><button class="save-client" id="saveClient">Guardar cliente</button><button class="cancel-client" id="cancelClient">Cancelar</button></div>
+   </div>
+   <p class="admin-note">Datos sincronizados con Supabase. Los cobros y estados de suscripción se actualizan mediante Mercado Pago y Netlify Functions.</p>
+  </div>
+ </div>
+
+</div>
+<script>
+/* Admin login + Supabase via Netlify Functions */
+(function(){
+ const $=id=>document.getElementById(id);
+ let token=sessionStorage.getItem('nexgen_admin_token')||''; let remote=[]; let editing=null;
+ const prices={Básico:1500,Profesional:2500,Premium:4000};
+ const label=s=>s==='active'?'Activo':s==='authorized'?'Activo':s==='pending'?'Pendiente':s==='paused'?'Pausado':s==='cancelled'?'Cancelado':'Vencido';
+ const money=n=>'$'+Number(n||0).toLocaleString('es-AR');
+ const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+ async function api(path,opts={}){const r=await fetch(path,{...opts,headers:{'Content-Type':'application/json',...(opts.headers||{}),Authorization:`Bearer ${token}`}});if(r.status===204)return null;const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||'Error de servidor');return d}
+ async function load(){remote=await api('/api/admin-api');render()}
+ function render(){const q=($('clientSearch').value||'').toLowerCase(),sf=$('statusFilter').value,pf=$('planFilter').value;const list=remote.filter(c=>(!q||`${c.name} ${c.email} ${c.plan}`.toLowerCase().includes(q))&&(sf==='all'||c.status===sf)&&(pf==='all'||c.plan===pf));$('clientRows').innerHTML=list.length?list.map(c=>`<tr><td><strong>${esc(c.name)}</strong></td><td>${esc(c.email)}</td><td>${esc(c.plan)}</td><td>${money(c.amount||prices[c.plan])}</td><td>${c.next_payment_date?new Date(c.next_payment_date).toLocaleDateString('es-AR'):(c.date||'—')}</td><td>${c.payment_status==='paid'?'<span class="payment-ok">✓ Pagado</span>':'<span class="payment-no">Pendiente</span>'}</td><td><span class="status ${c.status==='active'?'active':c.status==='pending'?'pending':'overdue'}">${label(c.status)}</span></td><td class="client-actions"><button onclick="window.nxRemoteEdit('${c.id}')">Editar</button><button onclick="window.nxRemoteDelete('${c.id}')">Eliminar</button></td></tr>`).join(''):'<tr><td colspan="8" style="text-align:center;padding:28px;color:#71869a">No hay clientes.</td></tr>';$('statClients').textContent=remote.length;$('statActive').textContent=remote.filter(c=>c.status==='active').length;$('statPending').textContent=remote.filter(c=>c.status==='pending').length;$('statRevenue').textContent=money(remote.filter(c=>c.status==='active').reduce((a,c)=>a+Number(c.amount||prices[c.plan]||0),0))}
+ function openPanel(){$('adminLogin').classList.remove('open');$('adminOverlay').classList.add('open');load().catch(e=>alert(e.message))}
+ $('loginBtn').onclick=async()=>{try{const r=await fetch('/api/admin-login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({user:$('adminUser').value.trim(),password:$('adminPass').value})});const d=await r.json();if(!r.ok)throw new Error(d.error||'No se pudo iniciar sesión');token=d.token;sessionStorage.setItem('nexgen_admin_token',token);openPanel()}catch(e){$('loginError').textContent=e.message}};
+ [$('adminUser'),$('adminPass')].forEach(el=>el.addEventListener('keydown',e=>{if(e.key==='Enter')$('loginBtn').click()}));
+ $('logoutAdmin').onclick=()=>{token='';sessionStorage.removeItem('nexgen_admin_token');location.reload()}; $('closeAdmin').onclick=()=>{location.href='/'};
+ $('clientSearch').oninput=render;$('statusFilter').onchange=render;$('planFilter').onchange=render;
+ $('addClient').onclick=()=>{editing=null;$('clientForm').reset();$('clientForm').classList.add('open');$('fName').focus()};$('cancelClient').onclick=()=>$('clientForm').classList.remove('open');
+ $('saveClient').onclick=async()=>{const d={name:$('fName').value.trim(),email:$('fEmail').value.trim(),plan:$('fPlan').value,amount:prices[$('fPlan').value],next_payment_date:$('fDate').value||null,status:$('fStatus').value,payment_status:$('fPaid').value==='yes'?'paid':'pending'};if(!d.name||!d.email)return alert('Completá nombre y email.');try{if(editing)await api('/api/admin-api',{method:'PATCH',body:JSON.stringify({id:editing,...d})});else await api('/api/admin-api',{method:'POST',body:JSON.stringify(d)});$('clientForm').classList.remove('open');editing=null;await load()}catch(e){alert(e.message)}};
+ window.nxRemoteEdit=id=>{const c=remote.find(x=>x.id===id);if(!c)return;editing=id;$('fName').value=c.name||'';$('fEmail').value=c.email||'';$('fPlan').value=c.plan||'Básico';$('fDate').value=c.next_payment_date?new Date(c.next_payment_date).toISOString().slice(0,10):'';$('fStatus').value=c.status||'pending';$('fPaid').value=c.payment_status==='paid'?'yes':'no';$('clientForm').classList.add('open')};
+ window.nxRemoteDelete=async id=>{if(!confirm('¿Eliminar este cliente?'))return;try{await api('/api/admin-api?id='+encodeURIComponent(id),{method:'DELETE'});await load()}catch(e){alert(e.message)}};
+ $('exportClients').onclick=()=>{const rows=[['Cliente','Email','Plan','Importe','Próximo cobro','Pago','Estado'],...remote.map(c=>[c.name,c.email,c.plan,c.amount||prices[c.plan],c.next_payment_date||'',c.payment_status||'',c.status||''])];const csv=rows.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='nexgen_clientes.csv';a.click()};
+ if(token)openPanel(); else $('adminLogin').classList.add('open');
+})();
+</script>
+</body>
+</html>

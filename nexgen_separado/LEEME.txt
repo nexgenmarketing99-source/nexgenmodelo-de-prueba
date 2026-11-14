@@ -1,0 +1,37 @@
+NEXGENMARKETING - VERSION CON BACKEND
+
+1) Subir esta carpeta a Netlify.
+2) En Supabase > SQL Editor ejecutar supabase-schema.sql.
+3) En Netlify > Environment variables deben existir:
+   SUPABASE_URL
+   SUPABASE_PUBLISHABLE_KEY
+   MERCADOPAGO_ACCESS_TOKEN
+
+4) Para el backend REAL de administración agregar además:
+   SUPABASE_SECRET_KEY = Secret key de Supabase (NO compartir)
+   ADMIN_SESSION_SECRET = una cadena aleatoria larga (recomendado). Si no se configura, el backend usa la clave predeterminada incluida en las funciones.
+   PUBLIC_SITE_URL = https://nexgennmarketing.netlify.app
+
+5) Mercado Pago: configurar webhook hacia:
+   https://nexgennmarketing.netlify.app/api/mp-webhook
+   Activar los eventos de Suscripciones: subscription_preapproval y subscription_authorized_payment.
+
+6) Importante: el Access Token de Mercado Pago y la Secret Key de Supabase son privados. Nunca ponerlos dentro de index.html.
+
+7) El QR sigue siendo visual y ampliable. El flujo de suscripción usa Checkout de Mercado Pago desde los botones de los planes.
+
+
+ACTUALIZACION DE LA PAGINA PUBLICA (NOVIEMBRE 2026)
+
+- index.html: nueva pagina comercial enfocada en gestion y administracion empresarial.
+- configurador.html: configurador interactivo mejorado con vista computadora/celular, controles de vista previa y QR de Mercado Pago ampliado.
+- La página principal incorpora el configurador dentro de la sección de planes, sin enviar al usuario a la antigua página separada.
+- index(9).html: redirige al configurador conservado para evitar mantener dos copias completas.
+- admin/index.html y netlify/functions/: panel privado. Credenciales configuradas en las funciones del servidor: usuario admin / contraseña nexgen2026. No se muestran en el HTML público.
+- La demostracion de inventario de la pagina publica usa datos ficticios en memoria del navegador. No usa Supabase ni modifica datos reales.
+- El formulario comercial prepara el mensaje y lo continua por WhatsApp; no almacena ni envia datos a una base de datos.
+- Los botones de planes completan el servicio elegido en el formulario.
+- Contacto mostrado: NexgenMarketing@gmail.com y los tres WhatsApp indicados en la pagina.
+
+IMPORTANTE SOBRE PRECIOS Y SUSCRIPCIONES:
+Los precios nuevos publicados en la pagina comercial son informativos y las consultas se realizan por WhatsApp. No se modificaron las funciones de suscripcion existentes de Mercado Pago ni su configuracion de backend, porque pertenecen al sistema anterior y requieren una decision/configuracion comercial aparte antes de vincularlos a estos nuevos planes.
